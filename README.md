@@ -1,9 +1,7 @@
-# Design Patterns
 
 # Mediator
 
 ~~~java
-
 package mediator;
 
 /**
@@ -24,14 +22,11 @@ public class StockExchangeApp {
 
         broker1.saleOrder("MSFT", 100);
         broker1.saleOrder("GOOG", 50);
-
         broker2.buyOrder("MSFT", 100);
         broker2.saleOrder("NRG", 10);
-
         broker1.buyOrder("NRG", 10);
 
         nyse.getStockOrders();
     }
 }
-
 ~~~
