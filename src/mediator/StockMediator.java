@@ -5,9 +5,8 @@ import java.util.ArrayList;
 /**
  * StockMediator Class
  *
- * Sales and buys orders on behalf of brokers Colleague(s)
- * Add Collegue (method used by Collegues) and ...
- * send back message that all is ok
+ * Mediator sales and buys orders on behalf of brokers Colleague(s)
+ * Mediator can addCollegue() and this method is called in Collegues class
  */
 class StockMediator implements Mediator {
 
