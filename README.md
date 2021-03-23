@@ -6,8 +6,6 @@ Colleagues don't need to know anything about each other.
 Collegues will send messages to the Mediator.
 Mediator will send back messages (if needeed) to the other colleques.
 
-Reference: https://www.youtube.com/watch?v=8DxIpdKd41A&ab_channel=DerekBanas
-
 # Client
 
 StockExchangeApp.java
@@ -97,3 +95,8 @@ public abstract class Colleague {
     }
 }
 ~~~
+
+# Reference
+
+DerekBanas Channel:
+https://www.youtube.com/watch?v=8DxIpdKd41A&ab_channel=DerekBanas
