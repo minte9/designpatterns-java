@@ -5,6 +5,9 @@ It is used to encapsulate comunications between related objects (named Colleague
 Colleagues don't need to know anything about each other.
 Collegues will send messages to the Mediator.
 Mediator will send back messages (if needeed) to the other colleques.
+
+# Client
+
 StockExchangeApp.java
 
 ~~~java
@@ -34,5 +37,30 @@ public class StockExchangeApp {
 
         nyse.getStockOrders();
     }
+}
+~~~
+
+# Mediator
+
+~~~java
+package learning;
+
+class StockMediator implements Mediator {
+
+    public StockMediator() {}
+
+    @Override
+    public void addColleague(Colleague colleague) {}
+    @Override
+    public void saleOrder(String stock, int shares) {}
+    @Override
+    public void buyOrder(String stock, int shares) {}
+}
+
+interface Mediator {
+
+    public void addColleague(Colleague colleague);
+    public void saleOrder(String stock, int shares);
+    public void buyOrder(String stock, int shares);
 }
 ~~~
