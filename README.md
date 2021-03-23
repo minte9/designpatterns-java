@@ -42,6 +42,8 @@ public class StockExchangeApp {
 
 # Mediator
 
+StockMediator.java
+
 ~~~java
 package learning;
 
@@ -66,6 +68,8 @@ interface Mediator {
 ~~~
 
 # Colleague
+
+Colleague.java
 
 ~~~java
 package learning;
