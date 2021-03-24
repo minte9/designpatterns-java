@@ -1,5 +1,5 @@
 
-# Mediator
+# Mediator Pattern
 
 It is used to encapsulate comunications between related objects (named Colleagues).
 Colleagues don't need to know anything about each other.
