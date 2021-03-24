@@ -11,7 +11,7 @@
 - Collegue is an abstract class, which represent all collegues that will be created.
 - All collegues share the same methods (saleOffer, buyOffer).
 - They will communicator through the use of these common methods.
-- The App will communicate with both ConcreteMediator and ConcreteCollegues.
+- The Client App will communicate with both ConcreteMediator and ConcreteCollegues.
 
 # Client
 
@@ -57,7 +57,7 @@ class StockMediator implements Mediator {
 
     @Override
     public void buyOrder(String stock, int shares) {
-        
+
     }
 }
 
