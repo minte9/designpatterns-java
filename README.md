@@ -6,6 +6,13 @@
 - Collegues will send messages to the Mediator.
 - Mediator will send back messages (if needeed) to the other colleques.
 
+# SHARE STOCK EXCHANGE EXAMPLE
+
+- Collegue is an abstract class, which represent all collegues that will be created.
+- All collegues share the same methods (saleOffer, buyOffer).
+- They will communicator through the use of these common methods.
+- The App will communicate with both ConcreteMediator and ConcreteCollegues.
+
 # Client
 
 StockExchangeApp.java
@@ -13,29 +20,16 @@ StockExchangeApp.java
 ~~~java
 package mediator;
 
-/**
- * StockExchangeApp Class
- *
- * One stock Mediator and two broker Colleague(s)
- * Collegues sign in to StockExchange and ...
- * mediator send back confirmation
- */
 public class StockExchangeApp {
 
     public static void main(String[] args) {
         
         StockMediator nyse = new StockMediator();
-        
-        FloorBroker broker1 = new FloorBroker("GormanSlacks", nyse);
-        ElectronicBroker broker2 = new ElectronicBroker("JTPoorman", nyse);
 
-        broker1.saleOrder("MSFT", 100);
-        broker1.saleOrder("GOOG", 50);
-        broker2.buyOrder("MSFT", 100);
-        broker2.saleOrder("NRG", 10);
-        broker1.buyOrder("NRG", 10);
+        System.out.println("Hello Mediator");
 
-        nyse.getStockOrders();
+        //FloorBroker broker = new FloorBroker("GormanSlacks", nyse);
+        //ElectronicBroker broker2 = new ElectronicBroker("JTPoorman", nyse);
     }
 }
 ~~~
@@ -45,7 +39,7 @@ public class StockExchangeApp {
 StockMediator.java
 
 ~~~java
-package learning;
+package mediator;
 
 class StockMediator implements Mediator {
 
@@ -72,7 +66,7 @@ interface Mediator {
 Colleague.java
 
 ~~~java
-package learning;
+package mediator;
 
 public abstract class Colleague {
 
@@ -96,7 +90,7 @@ public abstract class Colleague {
 }
 ~~~
 
-# Pattern Code
+# Pattern Code - v1.0
 
 - https://github.com/minte9/designpatterns-java/tree/main/src/mediator
 
