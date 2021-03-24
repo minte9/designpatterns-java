@@ -96,7 +96,7 @@ public abstract class Colleague {
 }
 ~~~
 
-# Code
+# Pattern Code
 
 - https://github.com/minte9/designpatterns-java/tree/main/src/mediator
 
