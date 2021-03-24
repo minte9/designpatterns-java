@@ -8,7 +8,8 @@ public class StockExchangeApp {
 
         System.out.println("Hello Mediator");
 
-        //FloorBroker broker = new FloorBroker("GormanSlacks", nyse);
-        //ElectronicBroker broker2 = new ElectronicBroker("JTPoorman", nyse);
+        // Next ... v1.2
+        // FloorBroker broker = new FloorBroker("GormanSlacks", nyse);
+        // ElectronicBroker broker2 = new ElectronicBroker("JTPoorman", nyse);
     }
 }

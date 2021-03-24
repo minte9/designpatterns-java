@@ -6,7 +6,7 @@
 - Collegues will send messages to the Mediator.
 - Mediator will send back messages (if needeed) to the other colleques.
 
-# SHARE STOCK EXCHANGE EXAMPLE
+# Share stock exchange - Example
 
 - Collegue is an abstract class, which represent all collegues that will be created.
 - All collegues share the same methods (saleOffer, buyOffer).
@@ -46,11 +46,19 @@ class StockMediator implements Mediator {
     public StockMediator() {}
 
     @Override
-    public void addColleague(Colleague colleague) {}
+    public void addColleague(Colleague colleague) {
+
+    }
+
     @Override
-    public void saleOrder(String stock, int shares) {}
+    public void saleOrder(String stock, int shares) {
+
+    }
+
     @Override
-    public void buyOrder(String stock, int shares) {}
+    public void buyOrder(String stock, int shares) {
+        
+    }
 }
 
 interface Mediator {
