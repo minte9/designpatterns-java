@@ -108,5 +108,5 @@ Derek Banas:
 - https://www.youtube.com/watch?v=8DxIpdKd41A&ab_channel=DerekBanas
 - http://www.newthinktank.com/2012/10/mediator-design-pattern-tutorial
 
-Minte9 Study:
+Minte9:
 - https://www.minte9.com/pages/1216/java-design-patterns-mediator
