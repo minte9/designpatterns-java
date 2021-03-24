@@ -98,7 +98,7 @@ public abstract class Colleague {
 }
 ~~~
 
-# Pattern Code - v1.0
+# Mirror Pattern Code - v1.0
 
 - https://github.com/minte9/designpatterns-java/tree/main/src/mediator
 
@@ -107,3 +107,6 @@ public abstract class Colleague {
 Derek Banas:
 - https://www.youtube.com/watch?v=8DxIpdKd41A&ab_channel=DerekBanas
 - http://www.newthinktank.com/2012/10/mediator-design-pattern-tutorial
+
+Minte9 Study:
+- https://www.minte9.com/pages/1216/java-design-patterns-mediator
