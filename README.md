@@ -98,11 +98,9 @@ public abstract class Colleague {
 
 # Code
 
-v1.0 - Basic Skeleton
-- https://github.com/minte9/designpatterns-java/tree/v1.0/src/mediator
+[v1.0 - Basic Skeleton](https://github.com/minte9/designpatterns-java/tree/v1.0/src/mediator)
 
-v1.2 - Colleagues sing up / Mediator assign brokerIds
-- https://github.com/minte9/designpatterns-java/tree/v1.2/src/mediator
+[v1.2 - Colleagues sing up / Mediator assign brokerIds](https://github.com/minte9/designpatterns-java/tree/v1.2/src/mediator)
 
 
 # Reference
