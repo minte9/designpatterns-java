@@ -98,7 +98,7 @@ public abstract class Colleague {
 }
 ~~~
 
-# Mirror Pattern Code
+# Mediator Pattern Code
 
 v1.0 - Basic Skeleton
 - https://github.com/minte9/designpatterns-java/tree/v1.0/src/mediator
