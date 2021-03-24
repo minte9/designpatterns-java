@@ -8,7 +8,7 @@
 
 # Share stock exchange - Example
 
-- Collegue is an abstract class, which represent all collegues that will be created.
+- Colleague is an abstract class, which represent all collegues that will be created.
 - All collegues share the same methods (saleOffer, buyOffer).
 - They will communicator through the use of these common methods.
 - The Client App will communicate with both ConcreteMediator and ConcreteCollegues.
@@ -99,7 +99,7 @@ public abstract class Colleague {
 # Code
 
 - [v1.0 - Basic Skeleton](https://github.com/minte9/designpatterns-java/tree/v1.0/src/mediator)
-- [v1.2 - Colleagues sing up; Mediator assigns brokerIds](https://github.com/minte9/designpatterns-java/tree/v1.2/src/mediator)
+- [v1.2 - Colleagues are signing up and Mediator assign broker Ids](https://github.com/minte9/designpatterns-java/tree/v1.2/src/mediator)
 
 
 # Reference
