@@ -13,6 +13,7 @@
 - They will communicator through the use of these common methods.
 - The Client App will communicate with both ConcreteMediator and ConcreteCollegues.
 
+
 # Client
 
 StockExchangeApp.java
@@ -34,22 +35,10 @@ public class StockExchangeApp {
         
         FloorBroker broker1 = new FloorBroker("GormanSlacks", nyse);
         ElectronicBroker broker2 = new ElectronicBroker("JTPoorman", nyse);
-
-        /* Next:
-
-        broker1.saleOrder("MSFT", 100);
-        broker1.saleOrder("GOOG", 50);
-
-        broker2.buyOrder("MSFT", 100);
-        broker2.saleOrder("NRG", 10);
-
-        broker1.buyOrder("NRG", 10);
-
-        nyse.getStockOrders();
-        */
     }
 }
 ~~~
+
 
 # Mediator
 
@@ -87,18 +76,12 @@ class StockMediator implements Mediator {
     }
 
     @Override
-    public void saleOrder(String stock, int shares, int brokerId) {
-
-    }
+    public void saleOrder(String stock, int shares, int brokerId) {}
 
     @Override
-    public void buyOrder(String stock, int shares, int brokerId) {
+    public void buyOrder(String stock, int shares, int brokerId) {}
 
-    }
-
-    public void getStockOrders() {
-
-    }
+    public void getStockOrders() {}
 }
 ~~~
 
@@ -115,6 +98,7 @@ public interface Mediator {
 }
 ~~~
 
+
 # Colleague
 
 Colleague.java
@@ -124,7 +108,7 @@ package mediator;
 
 /**
  * When a broker Collegue sales or buy shares
- * it lets the Meditor decide and do the job
+ * it lets the Mediator decide and do the job
  */
 public abstract class Colleague {
 
@@ -158,6 +142,7 @@ public abstract class Colleague {
     }
 }
 ~~~
+
 
 # Concreate Colleagues
 
