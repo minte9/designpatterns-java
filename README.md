@@ -100,7 +100,7 @@ public abstract class Colleague {
 
 # Mirror Pattern Code - v1.0
 
-- https://github.com/minte9/designpatterns-java/tree/main/src/mediator
+- https://github.com/minte9/designpatterns-java/tree/v1.0/src/mediator
 
 # Reference
 
