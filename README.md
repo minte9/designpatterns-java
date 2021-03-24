@@ -102,7 +102,7 @@ public abstract class Colleague {
 - [v1.2 - Colleagues are signing up and Mediator assign broker Ids](https://github.com/minte9/designpatterns-java/tree/v1.2/src/mediator)
 
 
-# Reference
+# References
 
 Derek Banas:
 - https://www.youtube.com/watch?v=8DxIpdKd41A&ab_channel=DerekBanas
