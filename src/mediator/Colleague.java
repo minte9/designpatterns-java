@@ -1,22 +1,37 @@
 package mediator;
 
+/**
+ * When a broker Collegue sales or buy shares
+ * it lets the Meditor decide and do the job
+ */
 public abstract class Colleague {
 
-    private Mediator mediator;
-    private String brokerId;
+	private Mediator mediator;
+	private String brokerName;
+	private int brokerId;
 
-    public Colleague(String b, Mediator m) {
+	public Colleague(String bn, Mediator m) {
 
-        mediator = m;
-        brokerId = b;
-        mediator.addColleague(this);
-    }
+		this.mediator = m;
+		this.brokerName = bn;
 
-    public void saleOrder(String stock, int shares) {
-        mediator.saleOrder(stock, shares); // Look Here
-    }
+		mediator.addColleague(this);
+	}
 
-    public void butyOrder(String stock, int shares) {
-        mediator.buyOrder(stock, shares); // Look Here
-    }
+	public void saleOrder(String stock, int shares) {
+		mediator.saleOrder(stock, shares, brokerId); // Look Here
+	}
+
+	public void buyOrder(String stock, int shares) {
+		mediator.buyOrder(stock, shares, brokerId);
+	}
+
+	public void setBrokerId(int brokerId) {
+		
+		this.brokerId = brokerId;
+
+		System.out.println(
+			brokerName + ": I signed up, Mediator gave me brokerId: " + brokerId
+		);
+	}
 }
