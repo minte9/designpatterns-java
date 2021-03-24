@@ -13,7 +13,6 @@
 - They will communicator through the use of these common methods.
 - The Client App will communicate with both ConcreteMediator and ConcreteCollegues.
 
-
 # Client
 
 StockExchangeApp.java
@@ -21,24 +20,19 @@ StockExchangeApp.java
 ~~~java
 package mediator;
 
-/**
- * StockExchangeApp Class
- *
- * One stock Mediator and two broker Colleague(s)
- * Collegues sign in to StockExchange
- */
 public class StockExchangeApp {
 
     public static void main(String[] args) {
         
         StockMediator nyse = new StockMediator();
-        
-        FloorBroker broker1 = new FloorBroker("GormanSlacks", nyse);
-        ElectronicBroker broker2 = new ElectronicBroker("JTPoorman", nyse);
+
+        System.out.println("Hello Mediator");
+
+        //FloorBroker broker = new FloorBroker("GormanSlacks", nyse);
+        //ElectronicBroker broker2 = new ElectronicBroker("JTPoorman", nyse);
     }
 }
 ~~~
-
 
 # Mediator
 
@@ -47,57 +41,33 @@ StockMediator.java
 ~~~java
 package mediator;
 
-import java.util.ArrayList;
-
-/**
- * StockMediator Class
- *
- * Mediator sales and buys orders on behalf of brokers Colleague(s)
- * Mediator can addCollegue() and this method is called in Collegues class
- */
 class StockMediator implements Mediator {
 
-    private ArrayList<Colleague> colleagues;
-    private int brokerId = 0; // or DB
-
-    public StockMediator() {
-
-        colleagues = new ArrayList();
-    }
+    public StockMediator() {}
 
     @Override
-    public void addColleague(Colleague c) {
-
-        colleagues.add(c);
-
-        brokerId++; // or from database
-        c.setBrokerId(brokerId); // Mediator -> Collegue
+    public void addColleague(Colleague colleague) {
 
     }
 
     @Override
-    public void saleOrder(String stock, int shares, int brokerId) {}
+    public void saleOrder(String stock, int shares) {
+
+    }
 
     @Override
-    public void buyOrder(String stock, int shares, int brokerId) {}
+    public void buyOrder(String stock, int shares) {
 
-    public void getStockOrders() {}
+    }
 }
-~~~
 
-Mediator.java
-
-~~~java
-package mediator;
-
-public interface Mediator {
+interface Mediator {
 
     public void addColleague(Colleague colleague);
-    public void saleOrder(String stock, int shares, int brokerId);
-    public void buyOrder(String stock, int shares, int brokerId);
+    public void saleOrder(String stock, int shares);
+    public void buyOrder(String stock, int shares);
 }
 ~~~
-
 
 # Colleague
 
@@ -106,93 +76,27 @@ Colleague.java
 ~~~java
 package mediator;
 
-/**
- * When a broker Collegue sales or buy shares
- * it lets the Mediator decide and do the job
- */
 public abstract class Colleague {
 
     private Mediator mediator;
-    private String brokerName;
-    private int brokerId;
+    private String brokerId;
 
-    public Colleague(String bn, Mediator m) {
+    public Colleague(String b, Mediator m) {
 
-        this.mediator = m;
-        this.brokerName = bn;
-
+        mediator = m;
+        brokerId = b;
         mediator.addColleague(this);
     }
 
     public void saleOrder(String stock, int shares) {
-        mediator.saleOrder(stock, shares, brokerId); // Look Here
+        mediator.saleOrder(stock, shares); // Look Here
     }
 
-    public void buyOrder(String stock, int shares) {
-        mediator.buyOrder(stock, shares, brokerId);
-    }
-
-    public void setBrokerId(int brokerId) {
-        
-        this.brokerId = brokerId;
-
-        System.out.println(
-            brokerName + ": I signed up, Mediator gave me brokerId: " + brokerId
-        );
+    public void butyOrder(String stock, int shares) {
+        mediator.buyOrder(stock, shares); // Look Here
     }
 }
 ~~~
-
-
-# Concreate Colleagues
-
-FloorBroker.java
-
-~~~java
-package mediator;
-
-/**
- * FloorBroker type Collegue
- * Super() method add Collegue brokerId to Mediator list ...
- * and send back login confirmation
- */
-public class FloorBroker extends Colleague {
-    
-    public FloorBroker(String brokerName, Mediator mediator) {
-
-        super(brokerName, mediator);
-        
-        System.out.println(
-            "FloorBroker: " + brokerName + " signed up with the stockexchange!\n"
-        );
-    }
-}
-~~~
-
-ElectronicBroker.java
-
-~~~java
-package mediator;
-
-/**
- * ElectronicBroker type Collegue
- * Super() method add Collegue brokerId to Mediator list ...
- * and send back login confirmation
- */
-
-public class ElectronicBroker extends Colleague {
-    
-    public ElectronicBroker(String brokerName, Mediator mediator) {
-
-        super(brokerName, mediator);
-
-        System.out.println(
-            "ElectronicBroker: " + brokerName + " signed up with the stockexchange!"
-        );
-    }
-}
-~~~
-
 
 # Code
 
@@ -201,7 +105,6 @@ v1.0 - Basic Skeleton
 
 v1.2 - Colleagues sing up / Mediator assign ids
 - https://github.com/minte9/designpatterns-java/tree/v1.2/src/mediator
-
 
 # Reference
 
