@@ -102,5 +102,6 @@ https://github.com/minte9/designpatterns-java/tree/main/src/mediator
 
 # Reference
 
-DerekBanas Channel:
+Derek Banas:
 https://www.youtube.com/watch?v=8DxIpdKd41A&ab_channel=DerekBanas
+http://www.newthinktank.com/2012/10/mediator-design-pattern-tutorial/
