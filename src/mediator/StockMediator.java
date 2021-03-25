@@ -40,7 +40,7 @@ class StockMediator implements Mediator {
 		sellOrders.add(newOrder); // Look Here
 		
 		System.out.println( siz + " shares of " + sym + 
-			" sold to colleague code " + newOrder.getBrokerId()
+			" sold by colleague code " + newOrder.getBrokerId()
 		);
 	}
 

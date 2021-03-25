@@ -14,9 +14,9 @@ package mediator;
      [java] Colleague JTPoorman: Mediator signed me up - ID 2
      [java] -- ElectronicBroker: JTPoorman
      [java] 100 shares of MSFT bought by colleague code 1
-     [java] 50 shares of GOOG sold to colleague code 1
+     [java] 50 shares of GOOG sold by colleague code 1
      [java] 100 shares of MSFT bought by colleague code 2
-     [java] 10 shares of NRG sold to colleague code 2
+     [java] 10 shares of NRG sold by colleague code 2
      [java] 10 shares of NRG bought by colleague code 1
  */
 public class StockExchangeApp {
