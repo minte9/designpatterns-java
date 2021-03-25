@@ -12,6 +12,6 @@ public class ElectronicBroker extends Colleague {
 
 		super(brokerName, mediator);
 		
-		System.out.println("-- ElectronicBroker: " + brokerName);
+		System.out.println("** ElectronicBroker: " + brokerName);
 	}
 }
