@@ -10,9 +10,5 @@ public class FloorBroker extends Colleague {
 	public FloorBroker(String brokerName, Mediator mediator) {
 
 		super(brokerName, mediator);
-		
-		System.out.println(
-			"FloorBroker: " + brokerName + " signed up with the stockexchange!\n"
-		);
 	}
 }

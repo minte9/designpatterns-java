@@ -11,11 +11,15 @@ import java.util.ArrayList;
 class StockMediator implements Mediator {
 
 	private ArrayList<Colleague> colleagues;
-	private int brokerId = 0; // or DB
+	private int brokerId = 0;
+	private ArrayList<Order> buyOrders;
+	private ArrayList<Order> sellOrders;
 
 	public StockMediator() {
 
-		colleagues = new ArrayList();
+		colleagues = new ArrayList<Colleague>();
+		buyOrders = new ArrayList<Order>();
+		sellOrders = new ArrayList<Order>();
 	}
 
 	@Override
@@ -25,20 +29,30 @@ class StockMediator implements Mediator {
 
 		brokerId++; // or from database
 		c.setBrokerId(brokerId); // Mediator -> Collegue
-
+		c.signUpMessage();
 	}
 
 	@Override
-	public void saleOrder(String stock, int shares, int brokerId) {
+	public void orderSell(String sym, int siz, int brokerId) {
+		
+		Order newOrder = new Order(sym, siz, brokerId);
 
+		sellOrders.add(newOrder); // Look Here
+		
+		System.out.println( siz + " shares of " + sym + 
+			" sold to colleague code " + newOrder.getBrokerId()
+		);
 	}
 
 	@Override
-	public void buyOrder(String stock, int shares, int brokerId) {
+	public void orderBuy(String sym, int siz, int brokerId) {
 
-	}
+		Order newOrder = new Order(sym, siz, brokerId);
 
-	public void getStockOrders() {
-
+		buyOrders.add(newOrder); // Look Here
+		
+		System.out.println( siz + " shares of " + sym + 
+			" bought by colleague code " + newOrder.getBrokerId()
+		);
 	}
 }

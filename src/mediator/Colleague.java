@@ -11,27 +11,26 @@ public abstract class Colleague {
 	private int brokerId;
 
 	public Colleague(String bn, Mediator m) {
-
-		this.mediator = m;
-		this.brokerName = bn;
-
+		mediator = m;
+		brokerName = bn;
 		mediator.addColleague(this);
 	}
 
-	public void saleOrder(String stock, int shares) {
-		mediator.saleOrder(stock, shares, brokerId); // Look Here
+	public void orderSell(String sym, int siz) {
+		mediator.orderSell(sym, siz, brokerId); // Look Here
 	}
 
-	public void buyOrder(String stock, int shares) {
-		mediator.buyOrder(stock, shares, brokerId);
+	public void orderBuy(String sym, int siz) {
+		mediator.orderBuy(sym, siz, brokerId);
 	}
 
-	public void setBrokerId(int brokerId) {
-		
-		this.brokerId = brokerId;
+	public void setBrokerId(int bid) {
+		brokerId = bid;
+	}
 
-		System.out.println(
-			brokerName + ": I signed up, Mediator gave me brokerId: " + brokerId
+	public void signUpMessage() {
+		System.out.println("Colleague " + brokerName + ": " +
+			"Mediator signed me up - ID " + brokerId
 		);
 	}
-}
+}		
