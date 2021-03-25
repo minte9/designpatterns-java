@@ -100,7 +100,7 @@ public abstract class Colleague {
 
 - [v1.0 - Basic Skeleton](https://github.com/minte9/designpatterns-java/tree/v1.0/src/mediator)
 - [v1.2 - Colleagues are signing up and Mediator assign broker Ids](https://github.com/minte9/designpatterns-java/tree/v1.2/src/mediator)
-- [v1.4] - Collegues sale and buy orders]https://github.com/minte9/designpatterns-java/tree/v1.4/src/mediator / StockOffer object added
+- [v1.4] - Collegues sale and buy orders](https://github.com/minte9/designpatterns-java/tree/v1.4/src/mediator) / StockOffer object added
 
 
 
