@@ -13,6 +13,13 @@
 - They will communicator through the use of these common methods.
 - The Client App will communicate with both ConcreteMediator and ConcreteCollegues.
 
+# Code
+
+- [v1.0 - Basic Skeleton](https://github.com/minte9/designpatterns-java/tree/v1.0/src/mediator)
+- [v1.2 - Colleagues are signing up and Mediator assign broker Ids](https://github.com/minte9/designpatterns-java/tree/v1.2/src/mediator)
+- [v1.4 - Collegues sale and buy orders, Order object added](https://github.com/minte9/designpatterns-java/tree/v1.4/src/mediator)
+
+
 # Client
 
 StockExchangeApp.java
@@ -94,14 +101,6 @@ public abstract class Colleague {
     }
 }
 ~~~
-
-
-# Code
-
-- [v1.0 - Basic Skeleton](https://github.com/minte9/designpatterns-java/tree/v1.0/src/mediator)
-- [v1.2 - Colleagues are signing up and Mediator assign broker Ids](https://github.com/minte9/designpatterns-java/tree/v1.2/src/mediator)
-- [v1.4 - Collegues sale and buy orders, Order object added](https://github.com/minte9/designpatterns-java/tree/v1.4/src/mediator)
-
 
 
 # References 
