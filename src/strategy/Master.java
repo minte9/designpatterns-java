@@ -6,6 +6,6 @@ public class Master extends Human {
 
 		super(name);
 		
-		speakType = new AskCapable(); // He can raise questions
+		speakType = new AskCapable(); // He can raise questions 
 	}
 }

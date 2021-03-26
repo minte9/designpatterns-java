@@ -31,4 +31,8 @@ public abstract class Human {
 	public String speak() {
 		return speakType.speak(); // Look Here
 	}
+
+	public void setAskCapability(Speak st) {
+		this.speakType = st;
+	}
 }

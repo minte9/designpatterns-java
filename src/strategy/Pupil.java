@@ -6,6 +6,6 @@ public class Pupil extends Human {
 		
 		super(name);
 
-		speakType = new AskIncapable(); // He knows everything
+		speakType = new AskIncapable(); // He knows everything 
 	}
 }
