@@ -139,7 +139,7 @@ Minte9:
 - This is known as Composition.
 - It allows you to change the capabilities of objects at run time!
 
-## 
+## App
 
 KnowledgeApp.java
 
