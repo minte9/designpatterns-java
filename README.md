@@ -13,14 +13,14 @@
 - Collegues will send messages to the Mediator.
 - Mediator will send back messages (if needeed) to the other colleques.
 
-### Share stock exchange - Example
+## Share stock exchange - Example
 
 - Colleague is an abstract class, which represent all collegues that will be created.
 - All collegues share the same methods (saleOffer, buyOffer).
 - They will communicator through the use of these common methods.
 - The Client App will communicate with both ConcreteMediator and ConcreteCollegues.
 
-### Client
+## Client
 
 StockExchangeApp.java
 
@@ -38,7 +38,7 @@ public class StockExchangeApp {
 }
 ~~~
 
-### Mediator
+## Mediator
 
 StockMediator.java
 
@@ -70,7 +70,7 @@ interface Mediator {
 }
 ~~~
 
-### Colleague
+## Colleague
 
 Colleague.java
 
@@ -100,7 +100,7 @@ public abstract class Colleague {
 ~~~
 
 
-### Code - Mediator Pattern
+## Code - Mediator Pattern
 
 - [v1.0 - Basic Skeleton](https://github.com/minte9/designpatterns-java/tree/v1.0/src/mediator)
 - [v1.2 - Colleagues are signing up and Mediator assign broker Ids](https://github.com/minte9/designpatterns-java/tree/v1.2/src/mediator)
@@ -109,7 +109,7 @@ public abstract class Colleague {
 
 
 
-### References - Mediator Pattern
+## References - Mediator Pattern
 
 Derek Banas:
 - https://www.youtube.com/watch?v=8DxIpdKd41A&ab_channel=DerekBanas
@@ -119,20 +119,21 @@ Minte9:
 - https://www.minte9.com/pages/1216/java-design-patterns-mediator
 
 
+#
+#
+
 
 ## Strategy Pattern
 
 - Insteed of using an interface for Speak we use an instance variable (speakType).
 - It is a subclass of interface Speak.
-
 - Human abstract class doesn't konw what speakType does.
 - It just knows that the behavior is available to its subclasses.
-
 - This is known as Composition.
 - It allows you to change the capabilities of objects at run time!
 
 
-### Knowledge App - Example
+## Knowledge App - Example
 
 ~~~java
 package strategy;
@@ -160,7 +161,7 @@ public class KnowledgeApp {
 }
 ~~~
 
-### Humans
+## Humans
 
 Master.java
 
