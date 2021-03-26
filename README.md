@@ -146,25 +146,12 @@ KnowledgeApp.java
 ~~~java
 package strategy;
 
-/**
- * run:
-     [java] Socrate: I can only raise questions.
-     [java] Alcibiades: I can answer!
- */
 public class KnowledgeApp {
     
     public static void main(String[] args) {
         
         Human master = new Master("Socrate");
         Human pupil = new Pupil("Alcibiades");
-
-        System.out.println( 
-            master.getName() + ": " + master.speak() 
-        );
-
-        System.out.println( 
-            pupil.getName() + ": " + pupil.speak() 
-        );
     }
 }
 ~~~
@@ -216,10 +203,6 @@ public abstract class Human {
 
     public Human(String name) {
         this.name = name;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public String speak() {
