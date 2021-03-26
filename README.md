@@ -1,4 +1,8 @@
 
+1. Mediator Pattern
+2. Mediator Pattern
+
+
 # Mediator Pattern
 
 - It is used to encapsulate comunications between related objects (named Colleagues).
