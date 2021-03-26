@@ -1,6 +1,6 @@
 
 1. Mediator Pattern
-2. Mediator Pattern
+2. Strategy Pattern
 
 
 # Mediator Pattern
