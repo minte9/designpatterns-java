@@ -213,7 +213,8 @@ public abstract class Human {
 
 ## Code
 
-- [v2.0 - Human objects can have different speak capabilities](https://github.com/minte9/designpatterns-java/tree/v2.0/src/strategy)
+- [v2.0 - Alcibiades can't ask](https://github.com/minte9/designpatterns-java/tree/v2.0/src/strategy)
+- [v2.0 - Alcibiades got wiser, he can ask now.](https://github.com/minte9/designpatterns-java/tree/v2.2/src/strategy)
 
 
 ## References
