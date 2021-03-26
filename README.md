@@ -100,7 +100,7 @@ public abstract class Colleague {
 ~~~
 
 
-## Code - Mediator Pattern
+## Code
 
 - [v1.0 - Basic Skeleton](https://github.com/minte9/designpatterns-java/tree/v1.0/src/mediator)
 - [v1.2 - Colleagues are signing up and Mediator assign broker Ids](https://github.com/minte9/designpatterns-java/tree/v1.2/src/mediator)
@@ -109,7 +109,7 @@ public abstract class Colleague {
 
 
 
-## References - Mediator Pattern
+## References
 
 Derek Banas:
 - https://www.youtube.com/watch?v=8DxIpdKd41A&ab_channel=DerekBanas
@@ -227,3 +227,17 @@ public abstract class Human {
     }
 }
 ~~~
+
+## Code
+
+- [v2.0 - AskCapability (or not)](https://github.com/minte9/designpatterns-java/tree/v2.0/src/strategy)
+
+
+## References
+
+Derek Banas:
+- https://www.youtube.com/watch?v=-NCgRD9-C6o&ab_channel=DerekBanas
+- http://www.newthinktank.com/2012/08/strategy-design-pattern-tutorial/
+
+Minte9:
+- https://www.minte9.com/pages/1201/java-design-patterns-strategy
