@@ -117,3 +117,104 @@ Derek Banas:
 
 Minte9:
 - https://www.minte9.com/pages/1216/java-design-patterns-mediator
+
+
+
+## Strategy Pattern
+
+- Insteed of using an interface for Speak we use an instance variable (speakType).
+- It is a subclass of interface Speak.
+
+- Human abstract class doesn't konw what speakType does.
+- It just knows that the behavior is available to its subclasses.
+
+- This is known as Composition.
+- It allows you to change the capabilities of objects at run time!
+
+
+### Knowledge App - Example
+
+~~~java
+package strategy;
+
+/**
+ * run:
+     [java] Socrate: I can only raise questions.
+     [java] Alcibiades: I can answer!
+ */
+public class KnowledgeApp {
+    
+    public static void main(String[] args) {
+        
+        Human master = new Master("Socrate");
+        Human pupil = new Pupil("Alcibiades");
+
+        System.out.println( 
+            master.getName() + ": " + master.speak() 
+        );
+
+        System.out.println( 
+            pupil.getName() + ": " + pupil.speak() 
+        );
+    }
+}
+~~~
+
+### Humans
+
+Master.java
+
+~~~java
+package strategy;
+
+public class Master extends Human {
+
+    public Master (String name) {
+
+        super(name);
+        
+        speakType = new AskCapable(); // He can raise questions
+    }
+}
+~~~
+
+Pupil.java
+
+~~~java
+package strategy;
+
+public class Pupil extends Human {
+
+    public Pupil (String name) {
+        
+        super(name);
+
+        speakType = new AskIncapable(); // He knows everything
+    }
+}
+~~~
+
+Human.java
+
+~~~java
+package strategy;
+
+public abstract class Human {
+
+    private String name;
+
+    public Speak speakType; // Look Here
+
+    public Human(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String speak() {
+        return speakType.speak(); // Look Here
+    }
+}
+~~~
