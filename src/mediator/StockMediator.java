@@ -7,6 +7,8 @@ import java.util.HashMap;
 /**
  * StockMediator Class
  *
+ * This is where all the Mediator magic happens!
+ *
  * Mediator sales and buys orders on behalf of brokers Colleague(s)
  * Mediator can addCollegue() and this method is called in Collegues class
  * Stock data keeps initial exchange data stock
