@@ -1,6 +1,8 @@
 
-1. Mediator Pattern
-2. Strategy Pattern
+# Patterns
+
+1. [Mediator Pattern](#mediator-pattern)
+2. [Strategy Pattern](#strategy-pattern)
 
 
 ## Mediator Pattern
