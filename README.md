@@ -125,6 +125,13 @@ Minte9:
 
 ## Strategy Pattern
 
+- You use this pattern if you need to dynamically change an object behavior at run time.
+- The pattern allows you to eliminate code duplication. 
+- It separates behavior from super and subclasses.
+
+
+## Knowledge App - Example
+
 - Insteed of using an interface for Speak we use an instance variable (speakType).
 - It is a subclass of interface Speak.
 - Human abstract class doesn't konw what speakType does.
@@ -132,8 +139,9 @@ Minte9:
 - This is known as Composition.
 - It allows you to change the capabilities of objects at run time!
 
+## App
 
-## Knowledge App - Example
+KnowledgeApp.java
 
 ~~~java
 package strategy;
