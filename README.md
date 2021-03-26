@@ -1,23 +1,23 @@
 
-1. Mediator Pattern
-2. Strategy Pattern
+# 1. Mediator Pattern
+# 2. Strategy Pattern
 
 
-# Mediator Pattern
+## Mediator Pattern
 
 - It is used to encapsulate comunications between related objects (named Colleagues).
 - Colleagues don't need to know anything about each other.
 - Collegues will send messages to the Mediator.
 - Mediator will send back messages (if needeed) to the other colleques.
 
-# Share stock exchange - Example
+### Share stock exchange - Example
 
 - Colleague is an abstract class, which represent all collegues that will be created.
 - All collegues share the same methods (saleOffer, buyOffer).
 - They will communicator through the use of these common methods.
 - The Client App will communicate with both ConcreteMediator and ConcreteCollegues.
 
-# Client
+### Client
 
 StockExchangeApp.java
 
@@ -35,7 +35,7 @@ public class StockExchangeApp {
 }
 ~~~
 
-# Mediator
+### Mediator
 
 StockMediator.java
 
@@ -67,7 +67,7 @@ interface Mediator {
 }
 ~~~
 
-# Colleague
+### Colleague
 
 Colleague.java
 
@@ -97,7 +97,7 @@ public abstract class Colleague {
 ~~~
 
 
-# Code
+### Code - Mediator Pattern
 
 - [v1.0 - Basic Skeleton](https://github.com/minte9/designpatterns-java/tree/v1.0/src/mediator)
 - [v1.2 - Colleagues are signing up and Mediator assign broker Ids](https://github.com/minte9/designpatterns-java/tree/v1.2/src/mediator)
@@ -106,7 +106,7 @@ public abstract class Colleague {
 
 
 
-# References 
+### References - Mediator Pattern
 
 Derek Banas:
 - https://www.youtube.com/watch?v=8DxIpdKd41A&ab_channel=DerekBanas
