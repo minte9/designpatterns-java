@@ -6,7 +6,7 @@
 
 
 
-## Mediator Pattern
+# Mediator Pattern
 
 - It is used to encapsulate comunications between related objects (named Colleagues).
 - Colleagues don't need to know anything about each other.
@@ -123,7 +123,7 @@ Minte9:
 #
 
 
-## Strategy Pattern
+# Strategy Pattern
 
 - You use this pattern if you need to dynamically change an object behavior at run time.
 - The pattern allows you to eliminate code duplication. 
