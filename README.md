@@ -230,7 +230,7 @@ public abstract class Human {
 
 ## Code
 
-- [v2.0 - AskCapability (or not)](https://github.com/minte9/designpatterns-java/tree/v2.0/src/strategy)
+- [v2.0 - Human objects can have different speak capabilities](https://github.com/minte9/designpatterns-java/tree/v2.0/src/strategy)
 
 
 ## References
