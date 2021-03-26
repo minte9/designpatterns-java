@@ -14,7 +14,7 @@
     <mkdir dir="build/jar"/>
     <jar destfile="build/jar/KnowledgeApp.jar" basedir="build/classes">
         <manifest>
-           <attribute name="Main-Class" value="strategy.KnowledgeApp"/>
+           <attribute name="Main-Class" value="strategy.KnowledgeApp"/> 
         </manifest>
     </jar>
     
