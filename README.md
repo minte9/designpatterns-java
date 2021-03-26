@@ -26,7 +26,7 @@ public class StockExchangeApp {
         
         StockMediator nyse = new StockMediator();
 
-        System.out.println("Hello Mediator");
+        System.out.println("Hello Mediator"); 
     }
 }
 ~~~
