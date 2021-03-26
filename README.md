@@ -125,12 +125,9 @@ Minte9:
 
 ## Strategy Pattern
 
-- Insteed of using an interface for Speak we use an instance variable (speakType).
-- It is a subclass of interface Speak.
-- Human abstract class doesn't konw what speakType does.
-- It just knows that the behavior is available to its subclasses.
-- This is known as Composition.
-- It allows you to change the capabilities of objects at run time!
+- Insteed of using an interface for Speak we use an instance variable (speakType) which is a subclass of interface Speak.
+- Human abstract class doesn't konw what speakType does, it just knows that the behavior is available to its subclasses.
+- This is known as Composition, it allows you to change the capabilities of objects at run time!
 
 
 ## Knowledge App - Example
