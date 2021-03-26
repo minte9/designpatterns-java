@@ -27,9 +27,6 @@ public class StockExchangeApp {
         StockMediator nyse = new StockMediator();
 
         System.out.println("Hello Mediator");
-
-        // FloorBroker broker = new FloorBroker("GormanSlacks", nyse);
-        // ElectronicBroker broker2 = new ElectronicBroker("JTPoorman", nyse);
     }
 }
 ~~~
