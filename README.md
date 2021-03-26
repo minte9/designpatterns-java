@@ -5,6 +5,8 @@
 2. [Strategy Pattern](#strategy-pattern)
 
 
+
+
 ## Mediator Pattern
 
 - It is used to encapsulate comunications between related objects (named Colleagues).
