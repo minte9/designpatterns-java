@@ -13,7 +13,7 @@
 - Collegues will send messages to the Mediator.
 - Mediator will send back messages (if needeed) to the other colleques.
 
-## Share stock market - Example
+## Example - Share stock market
 
 - Colleague is an abstract class, which represent all collegues that will be created.
 - All collegues share the same methods (saleOffer, buyOffer).
@@ -136,7 +136,7 @@ Minte9:
 - It separates behavior from super and subclasses.
 
 
-## Knowledge App - Example
+## Example - Knowledge App
 
 - Insteed of using an interface for Speak we use an instance variable (speakType).
 - It is a subclass of interface Speak.
@@ -254,7 +254,7 @@ Minte9:
 - It calls one of observers method
 
 
-## Exchange Rate App - Example
+## Example - Exchange Rate App
 
 - Central Bank sets daily exchange rates and notify observers
 - The observers (banks) receive notifications through update() method
