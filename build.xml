@@ -12,16 +12,16 @@
     <target name="jar">
     
     <mkdir dir="build/jar"/>
-    <jar destfile="build/jar/KnowledgeApp.jar" basedir="build/classes">
+    <jar destfile="build/jar/ExchangeRatesApp.jar" basedir="build/classes">
         <manifest>
-           <attribute name="Main-Class" value="strategy.KnowledgeApp"/>
+           <attribute name="Main-Class" value="observer.ExchangeRatesApp"/>
         </manifest>
     </jar>
     
     </target>
 
     <target name="run">
-        <java jar="build/jar/KnowledgeApp.jar" fork="true"/>
+        <java jar="build/jar/ExchangeRatesApp.jar" fork="true"/>
     </target>
 
 </project>

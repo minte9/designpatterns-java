@@ -3,7 +3,7 @@
 
 1. [Mediator Pattern](#mediator-pattern)
 2. [Strategy Pattern](#strategy-pattern)
-
+3. [Observer Pattern](#observer-pattern)
 
 
 # Mediator Pattern
@@ -123,6 +123,12 @@ Minte9:
 #
 
 
+
+
+
+
+
+
 # Strategy Pattern
 
 - You use this pattern if you need to dynamically change an object behavior at run time.
@@ -211,6 +217,7 @@ public abstract class Human {
 }
 ~~~
 
+
 ## Code
 
 - [v2.0 - Alcibiades can't ask](https://github.com/minte9/designpatterns-java/tree/v2.0/src/strategy)
@@ -225,3 +232,118 @@ Derek Banas:
 
 Minte9:
 - https://www.minte9.com/pages/1201/java-design-patterns-strategy
+
+
+
+
+
+
+
+
+
+
+
+#
+#
+
+
+# Observer Pattern
+
+- An object (Publisher/Subject) maintain a list of its dependents (subscribers/observers)
+- The Publisher notifies subscribers automatically when any state changes 
+- It calls one of observers method
+
+
+## Exchange Rate App - Example
+
+- Central Bank sets daily exchange rates and notify observers
+- The observers (banks) receive notifications through update() method
+
+## App
+
+ExchangeRatesApp.java
+
+~~~java
+package observer;
+
+public class ExchangeRatesApp {
+    
+    public static void main(String[] args) {
+
+        CentralBank feed = new CentralBank();
+
+        Bank bankING = new Bank("ING");
+        Bank bankBNP = new Bank("BNP");
+
+        feed.subscribe(bankING);
+        feed.subscribe(bankBNP);
+
+        feed.setRates(); // some data feed
+
+        feed.notifyObservers(); // Look Here
+
+        System.out.println("Observers were notified!");
+    }
+}
+~~~
+
+CentralBank.java
+
+~~~java
+package observer;
+
+import java.util.ArrayList;
+
+class CentralBank implements Subject {
+    
+    public CentralBank() {}
+
+    public void setRates() {}
+
+    public void subscribe(Observer o) {}
+    public void unsubscribe(Observer o) {}
+    public void notifyObservers() {}
+}
+~~~
+
+Observer.java
+
+~~~java
+package observer;
+
+class Bank implements Observer {
+    
+    public Bank(String name) {}
+
+    public void update() {} // Look Here
+}
+~~~
+
+Subject.java
+
+~~~java
+package observer;
+
+interface Subject {
+    public void subscribe(Observer o);
+    public void unsubscribe(Observer o);
+    public void notifyObservers();
+}
+~~~
+
+
+
+## Code
+
+- [v3.0 - CentralBank change rates and notifies the observers](https://github.com/minte9/designpatterns-java/tree/v3.0/src/observer)
+
+
+## References
+
+Derek Banas:
+- https://www.youtube.com/watch?v=wiQdrH2YpT4&ab_channel=DerekBanas
+- http://www.newthinktank.com/2012/08/observer-design-pattern-tutorial/
+
+Minte9:
+- https://www.minte9.com/pages/1199/java-design-patterns-observer
+
