@@ -346,7 +346,7 @@ interface Observer {
 
 ## Code
 
-- [v3.0 - CentralBank change rates and notifies the observers](https://github.com/minte9/designpatterns-java/tree/v3.0/src/observer)
+- [v3.0 - Basik Skeleton](https://github.com/minte9/designpatterns-java/tree/v3.0/src/observer)
 
 
 ## References
