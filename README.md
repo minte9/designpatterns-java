@@ -13,7 +13,7 @@
 - Collegues will send messages to the Mediator.
 - Mediator will send back messages (if needeed) to the other colleques.
 
-## Share stock exchange - Example
+## Share stock market - Example
 
 - Colleague is an abstract class, which represent all collegues that will be created.
 - All collegues share the same methods (saleOffer, buyOffer).
@@ -22,12 +22,12 @@
 
 ## Client
 
-StockExchangeApp.java
+StockMarketApp.java
 
 ~~~java
 package mediator;
 
-public class StockExchangeApp {
+public class StockMarketApp {
 
     public static void main(String[] args) {
         
