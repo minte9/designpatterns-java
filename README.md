@@ -313,7 +313,7 @@ package observer;
 class Bank implements Observer {
     
     public Bank(String name) {
-        
+
     }
 
     public void update() {} // Look Here
@@ -329,6 +329,16 @@ interface Subject {
     public void subscribe(Observer o);
     public void unsubscribe(Observer o);
     public void notifyObservers();
+}
+~~~
+
+Observer.java
+
+~~~java
+package observer;
+
+interface Observer {
+    public void update();
 }
 ~~~
 
