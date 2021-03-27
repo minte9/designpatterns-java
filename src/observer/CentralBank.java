@@ -6,7 +6,10 @@ class CentralBank implements Subject {
 	
 	public CentralBank() {}
 
-	public void setRates() {}
+	public void setRates() {
+
+		notifyObservers();
+	}
 
 	public void subscribe(Observer o) {}
     public void unsubscribe(Observer o) {}

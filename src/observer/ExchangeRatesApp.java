@@ -6,14 +6,11 @@ public class ExchangeRatesApp {
 
 		CentralBank feed = new CentralBank();
 
-		Bank ing = new Bank("ING");
-		Bank bnp = new Bank("BNP");
+		Bank ing = new Bank("ING", feed);
+		Bank bnp = new Bank("BNP", feed);
 
-		feed.subscribe(ing);
-		feed.subscribe(bnp);
 		feed.setRates();
-		feed.notifyObservers(); // Look Here
 
-		System.out.println("Observers were notified!");
+		//System.out.println("Observers were notified!");
 	}
 }

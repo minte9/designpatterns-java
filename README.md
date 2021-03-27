@@ -291,8 +291,6 @@ CentralBank.java
 ~~~java
 package observer;
 
-import java.util.ArrayList;
-
 class CentralBank implements Subject {
     
     public CentralBank() {
