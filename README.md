@@ -272,14 +272,13 @@ public class ExchangeRatesApp {
 
         CentralBank feed = new CentralBank();
 
-        Bank bankING = new Bank("ING");
-        Bank bankBNP = new Bank("BNP");
+        Bank ing = new Bank("ING");
+        Bank bnp = new Bank("BNP");
 
-        feed.subscribe(bankING);
-        feed.subscribe(bankBNP);
+        feed.subscribe(ing);
+        feed.subscribe(bnp);
 
         feed.setRates(); // some data feed
-
         feed.notifyObservers(); // Look Here
 
         System.out.println("Observers were notified!");
@@ -296,10 +295,10 @@ import java.util.ArrayList;
 
 class CentralBank implements Subject {
     
-    public CentralBank() {}
+    public CentralBank() {
 
+    }
     public void setRates() {}
-
     public void subscribe(Observer o) {}
     public void unsubscribe(Observer o) {}
     public void notifyObservers() {}
@@ -313,7 +312,9 @@ package observer;
 
 class Bank implements Observer {
     
-    public Bank(String name) {}
+    public Bank(String name) {
+        
+    }
 
     public void update() {} // Look Here
 }
