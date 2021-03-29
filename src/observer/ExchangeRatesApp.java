@@ -1,9 +1,16 @@
 package observer;
 
 /**
- * Create the Subject object CentralBank
- * Instance variable feed will be used to subscribe banks
+ * CentralBank is the Publisher (or Subject)
+ * Subject Instance variable (feed) pass as parameter
+ * Observer (banks) subscriber themselves (using feed object)
+ * CentralBank set rates (and notify observers)
  *
+ * run:
+     [java] Subject (CentralBank): ING observer notified
+     [java] Observer (ING): Rates updated
+     [java] Subject (CentralBank): BNP observer notified
+     [java] Observer (BNP): Rates updated
  */
 
 public class ExchangeRatesApp {

@@ -2,6 +2,12 @@ package observer;
 
 import java.util.ArrayList;
 
+/** CentralBank Publisher (or Subject)
+ *  Maintain a list of observers (add, remove)
+ *  Foreach observers the Publisher uses ...
+ *  observer's method update() for notification
+ */
+
 class CentralBank implements Subject {
 
 	ArrayList<Observer> observers;
@@ -31,8 +37,9 @@ class CentralBank implements Subject {
 
 		for(Observer o : observers) {
 			
+			System.out.println("Subject (CentralBank): " + o.getName() + " observer notified");
+
 			o.update(rates); // Look Here
-			//System.out.println(o.getName() + " notified");
 		}
 	}
 }
