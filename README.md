@@ -250,8 +250,8 @@ Minte9:
 # Observer Pattern
 
 - An object (Publisher/Subject) maintain a list of its dependents (subscribers/observers)
-- The Publisher notifies subscribers automatically when any state changes 
-- It calls one of observers method
+- The Subject notifies subscribers when any state changes 
+- It calls one of observers method (update())
 
 
 ## Example - Exchange Rate App
