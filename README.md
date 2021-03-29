@@ -341,6 +341,28 @@ interface Observer {
 ~~~
 
 
+## Output
+
+This is how the final result should be:
+
+~~~java
+ /** run:
+     [java] CentralBank [Rates updated] ---
+     [java] 
+     [java] CentralBank [ING notified]
+     [java] ING: EURUSD:1.2222 EURGBP:0.3333 
+     [java] CentralBank [BNP notified]
+     [java] BNP: EURUSD:1.2222 EURGBP:0.3333 
+     [java] 
+     [java] BNP: I've unsubscribed from Rates Feed!
+     [java] 
+     [java] CentralBank [Rates updated] ---
+     [java] 
+     [java] CentralBank [ING notified]
+     [java] ING: EURUSD:1.4444 EURGBP:0.6666 
+ */
+~~~
+
 
 ## Code
 

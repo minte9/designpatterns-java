@@ -20,7 +20,6 @@ package observer;
      [java] 
      [java] CentralBank [ING notified]
      [java] ING: EURUSD:1.4444 EURGBP:0.6666 
-
  */
 
 public class ExchangeRatesApp {
