@@ -358,7 +358,7 @@ This is how the final result should be:
      [java] 
      [java] CentralBank [Rates updated] ---
      [java] 
-     [java] CentralBank [ING notified]
+     [java] CentralBank [ING notified] 
      [java] ING: EURUSD:1.4444 EURGBP:0.6666 
  */
 ~~~
