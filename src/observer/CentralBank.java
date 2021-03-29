@@ -1,6 +1,7 @@
 package observer;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /** CentralBank Publisher (or Subject)
  *  Maintain a list of observers (add, remove)
@@ -12,17 +13,37 @@ class CentralBank implements Subject {
 
 	ArrayList<Observer> observers;
 	ArrayList<String> rates;
+	String[] times;
 	
 	public CentralBank() {
+
 		observers = new ArrayList<Observer>();
 		rates = new ArrayList<String>();
 	}
 
-	public void setRates() {
+	public void updateRates(String time) { // Rates feed
 
-		rates.add("EURUSD:1.2345");
-		rates.add("EURGBP:0.9876");
+		rates.clear();
+
+		if (time == "first_time") {
+			add("EURUSD:1.2222");
+			add("EURGBP:0.3333");
+		}
+
+		if (time == "second_time") {
+			add("EURUSD:1.4444");
+			add("EURGBP:0.6666");
+		}
+
+		System.out.println("\nCentralBank [Rates updated] ---\n");
+
 		notifyObservers();
+	}
+
+	private void add(String rate) {
+		if (! Arrays.asList(rates).contains(rate)) {
+			rates.add(rate);
+		}
 	}
 
 	public void subscribe(Observer o) {
@@ -37,7 +58,7 @@ class CentralBank implements Subject {
 
 		for(Observer o : observers) {
 			
-			System.out.println("Subject (CentralBank): " + o.getName() + " observer notified");
+			System.out.println("CentralBank [" + o.getName() + " notified]");
 
 			o.update(rates); // Look Here
 		}

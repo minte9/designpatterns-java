@@ -346,7 +346,7 @@ interface Observer {
 
 - [v3.0 - Basik Skeleton](https://github.com/minte9/designpatterns-java/tree/v3.0/src/observer)
 - [v3.2 - Subscribe and notify observers](https://github.com/minte9/designpatterns-java/tree/v3.2/src/observer)
-
+- [v3.4 - Update rates / Observer unsubscribe](https://github.com/minte9/designpatterns-java/tree/v3.4/src/observer)
 
 ## References
 

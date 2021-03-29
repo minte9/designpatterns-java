@@ -14,6 +14,7 @@ class Bank implements Observer {
 	private String name;
 	private Subject feed;
 	private ArrayList<String> feedRates;
+	private String rates;
 	
 	public Bank(String name, Subject feed) {
 
@@ -29,9 +30,22 @@ class Bank implements Observer {
 
 		feedRates = rates;
 		
-		System.out.println("Observer (" + name + "): Rates updated");
+		System.out.println(name + ": " + getRates());
 	}
 
 	@Override
 	public String getName() { return name; }
+
+	public String getRates() {
+
+		rates = "";
+		feedRates.forEach((rate) -> {rates += rate + " "; });
+		return rates;
+	}
+
+	public void leave() {
+
+		feed.unsubscribe(this);
+		System.out.println("\n" + name + ": I've unsubscribed from Rates Feed!");
+	}
 }

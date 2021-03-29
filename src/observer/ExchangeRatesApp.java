@@ -7,10 +7,20 @@ package observer;
  * CentralBank set rates (and notify observers)
  *
  * run:
-     [java] Subject (CentralBank): ING observer notified
-     [java] Observer (ING): Rates updated
-     [java] Subject (CentralBank): BNP observer notified
-     [java] Observer (BNP): Rates updated
+     [java] CentralBank [Rates updated] ---
+     [java] 
+     [java] CentralBank [ING notified]
+     [java] ING: EURUSD:1.2222 EURGBP:0.3333 
+     [java] CentralBank [BNP notified]
+     [java] BNP: EURUSD:1.2222 EURGBP:0.3333 
+     [java] 
+     [java] BNP: I've unsubscribed from Rates Feed!
+     [java] 
+     [java] CentralBank [Rates updated] ---
+     [java] 
+     [java] CentralBank [ING notified]
+     [java] ING: EURUSD:1.4444 EURGBP:0.6666 
+
  */
 
 public class ExchangeRatesApp {
@@ -22,6 +32,10 @@ public class ExchangeRatesApp {
 		Bank ing = new Bank("ING", feed);
 		Bank bnp = new Bank("BNP", feed);
 
-		feed.setRates();
+		feed.updateRates("first_time");
+		
+		bnp.leave(); // observer unsubscribe
+
+		feed.updateRates("second_time");
 	}
 }
