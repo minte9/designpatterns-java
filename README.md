@@ -343,7 +343,7 @@ interface Observer {
 
 ## Output
 
-This is how the final result should be:
+This is how the final result should be v3.4:
 
 ~~~java
  /** run:
