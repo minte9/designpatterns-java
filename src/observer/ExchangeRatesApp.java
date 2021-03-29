@@ -1,5 +1,11 @@
 package observer;
 
+/**
+ * Create the Subject object CentralBank
+ * Instance variable feed will be used to subscribe banks
+ *
+ */
+
 public class ExchangeRatesApp {
 	
 	public static void main(String[] args) {
@@ -10,7 +16,5 @@ public class ExchangeRatesApp {
 		Bank bnp = new Bank("BNP", feed);
 
 		feed.setRates();
-
-		//System.out.println("Observers were notified!");
 	}
 }

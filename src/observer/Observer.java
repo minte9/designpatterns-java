@@ -1,5 +1,7 @@
 package observer;
 
+import java.util.ArrayList;
+
 interface Observer {
-	public void update();
+	public void update(ArrayList rates);
 }
