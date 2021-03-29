@@ -100,6 +100,28 @@ public abstract class Colleague {
 ~~~
 
 
+
+## Output
+
+This is how the final result should be v1.6:
+
+~~~java
+/** run:
+     [java] Colleague GormanSlacks: Mediator signed me up - ID 1
+     [java] -- FloorBroker: GormanSlacks
+     [java] Colleague JTPoorman: Mediator signed me up - ID 2
+     [java] ** ElectronicBroker: JTPoorman
+     [java] 
+     [java] broker 1 sell 100 MSFT | MSFT:200 GOOG:100 
+     [java] broker 2 buy 200 MSFT | MSFT:0 GOOG:100 
+     [java] broker 2 buy 10 MSFT | Error: stock exceded! | MSFT:0 GOOG:100 
+     [java] broker 2 sell 50 GOOG | MSFT:0 GOOG:150 
+     [java] broker 1 buy 150 GOOG | MSFT:0 GOOG:0 
+     [java] broker 1 buy 50 GOOG | Error: stock exceded! | MSFT:0 GOOG:0 
+ */
+~~~
+
+
 ## Code
 
 - [v1.0 - Basic Skeleton](https://github.com/minte9/designpatterns-java/tree/v1.0/src/mediator)
@@ -215,6 +237,19 @@ public abstract class Human {
         return speakType.speak(); // Look Here
     }
 }
+~~~
+
+
+## Output
+
+This is how the final result should be v2.2:
+
+~~~java
+/** run:
+     [java] Socrate: I can raise questions.
+     [java] Alcibiades: I can answer, I know everything!
+     [java] Alcibiades: I can raise questions.
+ */
 ~~~
 
 
