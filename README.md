@@ -167,88 +167,78 @@ Minte9:
 - This is known as Composition.
 - It allows you to change the capabilities of objects at run time!
 
-## App
-
-KnowledgeApp.java
+## App.java
 
 ~~~java
-package strategy;
-
-public class KnowledgeApp {
+/**
+ * With Strategy Pattern a parent abstract class ...
+ * doesn't konw what the behavior type is.
+ * It just knows that it is available to its subclasses
+ */
+class App {
     
     public static void main(String[] args) {
         
-        Human master = new Master("Socrate");
-        Human pupil = new Pupil("Alcibiades");
-    }
-}
-~~~
+        Master m = new Master("Socrate");
+        m.type = new AskCapable();
+        m.speak();
 
-## Humans
+        Pupil p = new Pupil("Alcibiades");
+        p.type = new AskIncapable();
+        p.speak();
 
-Master.java
-
-~~~java
-package strategy;
-
-public class Master extends Human {
-
-    public Master (String name) {
-
-        super(name);
+        // now, we are able ...
+        // to change the behavior type at runtime
         
-        speakType = new AskCapable(); // He can raise questions
+        p.type = new AskCapable();
+        p.speak();
+    }    
+}
+
+class Master extends Human {
+    public Master(String n) {
+        name = n;
     }
 }
-~~~
-
-Pupil.java
-
-~~~java
-package strategy;
-
-public class Pupil extends Human {
-
-    public Pupil (String name) {
-        
-        super(name);
-
-        speakType = new AskIncapable(); // He knows everything
+class Pupil extends Human {
+    public Pupil(String n) {
+        name = n;
     }
 }
-~~~
-
-Human.java
-
-~~~java
-package strategy;
-
-public abstract class Human {
-
-    private String name;
-
-    public Speak speakType; // Look Here
-
-    public Human(String name) {
-        this.name = name;
+abstract class Human {
+    String name;
+    Speak type;
+    public void speak() {
+        System.out.print(name + ": ");
+        type.speak(); // Look Here
     }
+}
 
-    public String speak() {
-        return speakType.speak(); // Look Here
+class AskCapable implements Speak {
+    public void speak() {
+        System.out.println("I can raise questions ...");
     }
+}
+class AskIncapable implements Speak {
+    public void speak() {
+        System.out.println("I can answer!");
+    }
+}
+interface Speak {
+    public void speak();
 }
 ~~~
 
 
 ## Output
 
-This is how the final result should be v2.2:
+This is how the final result should be:
 
 ~~~java
 /** run:
-     [java] Socrate: I can raise questions.
-     [java] Alcibiades: I can answer, I know everything!
-     [java] Alcibiades: I can raise questions.
+     [java] Socrate: I can raise questions ...
+     [java] Alcibiades: I can answer!
+     [java] Alcibiades: I can raise questions ...
  */
 ~~~
 
